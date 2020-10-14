@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	 version="3.1">
+    <servlet>
+        <servlet-name>inicioSesion</servlet-name>
+        <servlet-class>servlet.inicioSesion</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>inicioSesion</servlet-name>
+        <url-pattern>/inicioSesion</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>registroUsuarios</servlet-name>
+        <servlet-class>servlet.registroUsuarios</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>registroUsuarios</servlet-name>
+        <url-pattern>/registroUsuarios</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>registroProveedores</servlet-name>
+        <servlet-class>servlet.registroProveedores</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>registroProveedores</servlet-name>
+        <url-pattern>/registroProveedores</url-pattern>
+    </servlet-mapping>
+    
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
