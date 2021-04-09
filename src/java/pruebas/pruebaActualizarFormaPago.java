@@ -14,20 +14,20 @@ public class pruebaActualizarFormaPago {
 
         int id_forma_pago;
         String tipo_pago = "";
-        int referencia_Pago;
+        String referencia_pago="";
 
         System.out.println("Digite el tipo de pago");
         tipo_pago = dato.next();
 
         System.out.println("Digite la referencia monetaria");
-        referencia_Pago = dato.nextInt();
+        referencia_pago = dato.nextLine();
 
         System.out.println("Digite el ID de la forma de pago");
         id_forma_pago = dato.nextInt();
 
         mifopa.setId_forma_pago(id_forma_pago);
         mifopa.setTipo_pago(tipo_pago);
-        mifopa.setReferencia_Pago(referencia_Pago);
+        mifopa.setReferencia_pago(referencia_pago);
 
         mifopa.setId_forma_pago(id_forma_pago);
 

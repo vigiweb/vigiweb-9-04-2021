@@ -20,7 +20,7 @@ public class pruebaConsultarInventario {
     public static void main(String[] args) {
         
        inventarioDAO mi_inventario_dao = new inventarioDAO();
-       inventario mi_inventario = mi_inventario_dao.ConsultarInventario(1);
+       inventario mi_inventario = mi_inventario_dao.ConsultarInventario("1");
 
         if (mi_inventario != null) {
             System.out.println("Inventario encontrado " + mi_inventario.getId_inventario() + " " + mi_inventario.getIn_saldo() + " ");

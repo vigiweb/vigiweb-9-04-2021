@@ -13,6 +13,7 @@ public class proveedor {
     
     private int  id_proveedor;
     private String pr_nombre;
+    private String pr_identificacion;
     private String pr_tipo;
     private int pr_telefono;
     private String pr_direccion;
@@ -32,6 +33,14 @@ public class proveedor {
 
     public void setPr_nombre(String pr_nombre) {
         this.pr_nombre = pr_nombre;
+    }
+
+    public String getPr_identificacion() {
+        return pr_identificacion;
+    }
+
+    public void setPr_identificacion(String pr_identificacion) {
+        this.pr_identificacion = pr_identificacion;
     }
 
     public String getPr_tipo() {

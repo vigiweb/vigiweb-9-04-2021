@@ -76,7 +76,7 @@ public class pruebaAdicionarUsuarios {
         
         mi_usuario.setNumero_documento(numero_documento);
         mi_usuario.setNombre_usuario(nombre_usuario);
-        mi_usuario.setContraseña(contraseña);
+        mi_usuario.setContrasena(contraseña);
         mi_usuario.setTelefono(telefono);
         mi_usuario.setDireccion(direccion);
         mi_usuario.setCorreo(correo);

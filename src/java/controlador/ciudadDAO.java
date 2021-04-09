@@ -65,7 +65,7 @@ public class ciudadDAO {
     }
 
     //////////////////////////////*MÉTODO CONSULTAR*//////////////////////////////////////
-    public ciudad ConsultarUsuario(int id_ciudad) {
+    public ciudad ConsultarUsuario(String id_ciudad) {
         ciudad mi_ciudad = null;
 
         conexion miConexion = new conexion();

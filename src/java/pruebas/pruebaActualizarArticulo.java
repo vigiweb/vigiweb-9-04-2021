@@ -25,8 +25,8 @@ public class pruebaActualizarArticulo {
 
         Scanner teclado = new Scanner(System.in);
 
-        int id_articulo;
         String nombre_articulo = "";
+        String referencia_articulo = "";
         double precio_articulo;
         int cantidad_articulo;
         double iva_articulo;
@@ -34,6 +34,9 @@ public class pruebaActualizarArticulo {
         
         System.out.println("Ingrese el nombre del artículo");
         nombre_articulo = teclado.nextLine();
+        
+        System.out.println("Ingrese el serial del artículo");
+        referencia_articulo = teclado.nextLine();
 
         System.out.println("Ingrese la descripción del artículo");
         descripcion_articulo = teclado.nextLine();
@@ -48,19 +51,16 @@ public class pruebaActualizarArticulo {
         System.out.println("Ingrese la cantidad del artículo");
         cantidad_articulo = teclado.nextInt();
 
-        System.out.println("Ingrese el ID del artículo");
-        id_articulo = teclado.nextInt();
 
-        miarticulo.setId_articulo(id_articulo);
         miarticulo.setNombre_articulo(nombre_articulo);
+        miarticulo.setReferencia_articulo(referencia_articulo);
         miarticulo.setPrecio_articulo(precio_articulo);
         miarticulo.setCantidad_articulo(cantidad_articulo);
         miarticulo.setIva_articulo(iva_articulo);
         miarticulo.setDescripcion_articulo(descripcion_articulo);
 
-        miarticulo.setId_articulo(id_articulo);
+        miarticulo.setReferencia_articulo(referencia_articulo);
 
-        miarticulo.setInventario_id_inventario(1);
         miarticulo.setEstado_articulo_id_estado_articulo(1);
         miarticulo.setProveedor_id_proveedor(1);
 

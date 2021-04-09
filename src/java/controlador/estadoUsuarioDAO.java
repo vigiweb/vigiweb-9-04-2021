@@ -74,7 +74,7 @@ public class estadoUsuarioDAO {
 
 ///////////////////////////////////*MÉTODO CONSULTAR*//////////////////////////////////////
     
-    public estado_usuario ConsultarEstadoUsuario(int id_estado_usuario) {
+    public estado_usuario ConsultarEstadoUsuario(String id_estado_usuario) {
         estado_usuario mi_estado_usuario = null;
 
         conexion miConexion = new conexion();

@@ -22,7 +22,7 @@ public class pruebaConsultarListaInventario {
 
         inventarioDAO inventario_dao = new inventarioDAO();
         ArrayList<inventario> mi_inventario = new ArrayList<inventario>();
-        mi_inventario = inventario_dao.ConsultarListadoInventario(0, 0, 0);
+        mi_inventario = inventario_dao.ConsultarListadoInventario("", "", "");
 
         int size = mi_inventario.size();
         System.out.println("<table border=\"1\"><tr><td>id_inventario</td><td>in_entradas</td><td>in_salidas</td><td>in_saldo</td> ");

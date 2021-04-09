@@ -20,7 +20,7 @@ public class pruebaConsultarTipoUsuario {
     public static void main(String[] args) {
 
         tipoUsuarioDAO mi_tipo_usuario_dao = new tipoUsuarioDAO();
-        tipo_usuario mi_tipo_usuario = mi_tipo_usuario_dao.ConsultarTipoUsuario(1);
+        tipo_usuario mi_tipo_usuario = mi_tipo_usuario_dao.ConsultarTipoUsuario("");
 
         if (mi_tipo_usuario != null) {
             System.out.println("Tipo Usuario encontrado " + mi_tipo_usuario.getId_tipo_usuario() + " " + mi_tipo_usuario.getDescp_usuario());

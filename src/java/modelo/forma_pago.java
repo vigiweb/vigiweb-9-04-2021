@@ -13,7 +13,7 @@ public class forma_pago {
     
     private int  id_forma_pago;
     private String tipo_pago;
-    private int referencia_Pago;
+    private String referencia_pago;
 
     public int getId_forma_pago() {
         return id_forma_pago;
@@ -31,12 +31,14 @@ public class forma_pago {
         this.tipo_pago = tipo_pago;
     }
 
-    public int getReferencia_Pago() {
-        return referencia_Pago;
+    public String getReferencia_pago() {
+        return referencia_pago;
     }
 
-    public void setReferencia_Pago(int referencia_Pago) {
-        this.referencia_Pago = referencia_Pago;
+    public void setReferencia_pago(String referencia_pago) {
+        this.referencia_pago = referencia_pago;
     }
+
+    
     
 }

@@ -81,7 +81,7 @@ public class facturaDAO {
     
     //////////////////////////////*MÉTODO CONSULTAR*//////////////////////////////////////
 
-     public factura ConsultarFactura(int id_factura) {
+     public factura ConsultarFactura(String id_factura) {
         factura Factura = null;
 
         conexion miConexion = new conexion();
@@ -111,7 +111,7 @@ public class facturaDAO {
      
         //////////////////////////////*MÉTODO LISTAR CONSULTA*//////////////////////////////////////
 
-     public ArrayList<factura> Listarfactura(int id_factura, String fecha_factura, int usuarios_id_usuarios ) {
+     public ArrayList<factura> Listarfactura(String id_factura, String fecha_factura, String usuarios_id_usuarios ) {
        ArrayList<factura>lista_factura = new ArrayList<factura>();
         factura mi_factura;
         

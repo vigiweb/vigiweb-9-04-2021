@@ -19,7 +19,7 @@ public class pruebaConsultarEstadoUsuario {
     public static void main(String[] args) {
         
         estadoUsuarioDAO mi_estado_usuario_dao = new estadoUsuarioDAO();
-        estado_usuario mi_estado_usuario = mi_estado_usuario_dao.ConsultarEstadoUsuario(1);
+        estado_usuario mi_estado_usuario = mi_estado_usuario_dao.ConsultarEstadoUsuario("");
 
         if (mi_estado_usuario != null) {
             System.out.println("El estado del usuario fue encontrado " + mi_estado_usuario.getId_estado_usuario() + " " + mi_estado_usuario.getDescrip_estado() + " ");

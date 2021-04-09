@@ -26,6 +26,7 @@ public class pruebaAdicionarProveedor {
        Scanner teclado = new Scanner(System.in);
        
        String pr_nombre = "";
+       String pr_identificacion = "";
        String pr_tipo = "";
        int pr_telefono;
        String pr_direccion = "";
@@ -34,6 +35,9 @@ public class pruebaAdicionarProveedor {
        
         System.out.println("Ingrese el nombre del proveedor");
         pr_nombre = teclado.nextLine();
+        
+        System.out.println("Ingrese la identificación del proveedor");
+        pr_identificacion = teclado.nextLine();
         
         System.out.println("Ingrese el tipo de proveedor");
         pr_tipo = teclado.nextLine();
@@ -49,6 +53,7 @@ public class pruebaAdicionarProveedor {
         
        
         mi_proveedor.setPr_nombre(pr_nombre);
+        mi_proveedor.setPr_identificacion(pr_identificacion);
         mi_proveedor.setPr_tipo(pr_tipo);
         mi_proveedor.setPr_telefono(pr_telefono);
         mi_proveedor.setPr_direccion(pr_direccion);

@@ -1,25 +1,19 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-var Buscar;
 
 function validacionRegistro() {
 
     var resultado = 'Correcto';
-    var numero_documento = $('#txt_identificacion_reg').val();
-    var nombre_usuario = $('#txt_nombre_reg').val();
+    var numero_documento = $('#txt_numero_documento_reg').val();
+    var nombre_usuario = $('#txt_nombre_usuario_reg').val();
     var contraseña = $('#txt_contraseña_reg').val();
     var telefono = $('#txt_telefono_reg').val();
     var direccion = $('#txt_direccion_reg').val();
     var correo = $('#txt_correo_reg').val();
     var barrio = $('#txt_barrio_reg').val();
     var estado_usuario = $('#txt_id_estado_usuario_Reg').val();
-    var tipo_usuario = $('#txt_id_tipo_usuario_Reg').val();
-    var tipo_documento = $('#txt_id_doc_identificacion_Reg').val();
-    var tipo_genero = $('#txt_id_genero_usuario_Reg').val();
-    var ciudad = $('#txt_id_ciudad_Reg').val();
+    var tipo_usuario = $('#txt_tipo_usuario_id_tipo_usuario_Reg').val();
+    var tipo_documento = $('#txt_tipo_documento_id_tipo_documento_Reg').val();
+    var tipo_genero = $('#txt_tipo_genero_id_tipo_genero_Reg').val();
+    var ciudad = $('#txt_ciudad_id_ciudad_Reg').val();
     
     console.log('Información a validar');
     console.log('numero_documento:' + numero_documento);
@@ -88,32 +82,5 @@ function validacionRegistro() {
     } else {
         return false;
     }
-}
-
-function setIdTipo(x){
-    $('#txt_id_doc_identificacion_Reg').val(x);
-    console.log("valor : " + x);
-    
-}
-
-function setIdTipousuario(x){
-    $('#txt_id_tipo_usuario_Reg').val(x);
-    console.log("valor : " + x);
-    
-}
-function setIdGenerousuario(x){
-    $('#txt_id_genero_usuario_Reg').val(x);
-    console.log("valor : " + x);
-    
-}
-
-function setIdEstadousuario(x){
-    $('#txt_id_estado_usuario_Reg').val(x);
-    console.log("valor : " + x);    
-}
-
-function setIdCiudad(x){
-    $('#txt_id_ciudad_Reg').val(x);
-    console.log("valor : " + x);  
 }
 

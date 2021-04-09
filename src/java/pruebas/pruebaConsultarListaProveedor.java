@@ -10,16 +10,17 @@ public class pruebaConsultarListaProveedor {
         
         proveedorDAO provdao = new proveedorDAO();
         ArrayList<proveedor> mi_prov = new ArrayList<proveedor>();
-        mi_prov = provdao.ListarProveedor(0, "");
+        mi_prov = provdao.ListarProveedor("", "", "");
         
         int size = mi_prov.size();
-        System.out.println("<table border=\"1\"><tr><td>idproveedor</td><td>pr_nombre</td><td>pr_tipo</td><td>pr_telefono</td><td>pr_direccion</td><td>pr_correo</td>");
+        System.out.println("<table border=\"1\"><tr><td>pr_nombre</td><td>pr_identificacion</td><td>pr_tipo</td><td>pr_telefono</td><td>pr_direccion</td><td>pr_correo</td>");
         
         for(proveedor I: mi_prov){
             
             System.out.println("<tr>");
             System.out.println("<td>" + I.getId_proveedor()+ "</td>");
             System.out.println("<td>" + I.getPr_nombre() + "</td>");
+            System.out.println("<td>" + I.getPr_identificacion() + "</td>");
             System.out.println("<td>" + I.getPr_tipo() + "</td>");
             System.out.println("<td>" + I.getPr_telefono() + "</td>");
             System.out.println("<td>" + I.getPr_direccion() + "</td>");

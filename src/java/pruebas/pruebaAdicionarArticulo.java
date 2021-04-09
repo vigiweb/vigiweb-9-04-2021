@@ -26,16 +26,19 @@ public class pruebaAdicionarArticulo {
        Scanner teclado = new Scanner(System.in);
        
        String nombre_articulo = "";
+       String referencia_articulo = "";
        double precio_articulo;
        int cantidad_articulo;
        double iva_articulo;
        String descripcion_articulo = "";
-       int inventario_id_inventario;
        int estado_articulo_id_estado_articulo;
        int proveedor_id_proveedor;
        
         System.out.println("Ingrese el nombre del artículo");
         nombre_articulo = teclado.nextLine();
+        
+        System.out.println("Ingrese el serial del artículo");
+        referencia_articulo = teclado.nextLine();
         
         System.out.println("Ingrese la descripción del artículo");
         descripcion_articulo = teclado.nextLine();
@@ -49,9 +52,6 @@ public class pruebaAdicionarArticulo {
         System.out.println("Ingrese la cantidad del artículo");
         cantidad_articulo = teclado.nextInt();
         
-        System.out.println("Ingrese el ID del inventario asociado");
-        inventario_id_inventario = teclado.nextInt();
-        
         System.out.println("Ingrese el ID del estado del artículo");
         estado_articulo_id_estado_articulo = teclado.nextInt();
         
@@ -59,12 +59,12 @@ public class pruebaAdicionarArticulo {
         proveedor_id_proveedor = teclado.nextInt();
         
         miarticulo.setNombre_articulo(nombre_articulo);
+        miarticulo.setReferencia_articulo(referencia_articulo);
         miarticulo.setPrecio_articulo(precio_articulo);
         miarticulo.setCantidad_articulo(cantidad_articulo);
         miarticulo.setIva_articulo(iva_articulo);
         miarticulo.setDescripcion_articulo(descripcion_articulo);
         miarticulo.setEstado_articulo_id_estado_articulo(estado_articulo_id_estado_articulo);
-        miarticulo.setInventario_id_inventario(inventario_id_inventario);
         miarticulo.setProveedor_id_proveedor(proveedor_id_proveedor);
 
         String miRespuesta = miarticuloDAO.AdicionarArticulo(miarticulo);

@@ -72,7 +72,7 @@ public class estadoArticuloDAO {
         }
 
         //////////////////////////////*MÉTODO CONSULTAR*//////////////////////////////////////
-        public estado_articulo ConsultarEstadoArticulo(int id_estado_articulo) {
+        public estado_articulo ConsultarEstadoArticulo(String id_estado_articulo) {
             estado_articulo mi_estado_articulo = null;
 
             conexion miConexion = new conexion();

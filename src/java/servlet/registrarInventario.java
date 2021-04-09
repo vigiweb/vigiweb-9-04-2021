@@ -5,7 +5,7 @@
  */
 package servlet;
 
-import controlador.usuariosDAO;
+import controlador.inventarioDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -13,14 +13,14 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import modelo.usuarios;
+import modelo.inventario;
 
 /**
  *
- * @author Famil
+ * @author diego
  */
-@WebServlet(name = "registroUsuarios", urlPatterns = {"/registroUsuarios"})
-public class registroUsuarios extends HttpServlet {
+@WebServlet(name = "registrarInventario", urlPatterns = {"/registrarInventario"})
+public class registrarInventario extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,69 +35,50 @@ public class registroUsuarios extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-
-        String numero_documento = request.getParameter("numero_documento");
-        String nombre_usuario = request.getParameter("nombre_usuario");
-        String contraseña = request.getParameter("contraseña");
-        String telefono = request.getParameter("telefono");
-        String direccion = request.getParameter("direccion");
-        String correo = request.getParameter("correo");
-        String barrio = request.getParameter("barrio");
-        String estado_usuario = request.getParameter("estado_usuario");
-        String tipo_usuario = request.getParameter("tipo_usuario");
-        String tipo_documento = request.getParameter("tipo_documento");
-        String tipo_genero = request.getParameter("tipo_genero");
-        String ciudad = request.getParameter("ciudad");
+        
+        String Entrada = request.getParameter("in_entradas");
+        String Salida = request.getParameter("in_salidas");
+        String Saldo = request.getParameter("in_saldo");
         String BanderaEstado = request.getParameter("BanderaRegistro");
-
-        int Telefono = Integer.parseInt(telefono);
-        int Estado_usuario = Integer.parseInt(estado_usuario);
-        int Tipo_usuario = Integer.parseInt(tipo_usuario);
-        int Tipo_documento = Integer.parseInt(tipo_documento);
-        int Tipo_genero = Integer.parseInt(tipo_genero);
-        int Ciudad = Integer.parseInt(ciudad);
-
-        usuariosDAO mi_usuario_dao = new usuariosDAO();
-        usuarios mi_usuario = new usuarios();
-
-        mi_usuario.setNumero_documento(numero_documento);
-        mi_usuario.setNombre_usuario(nombre_usuario);
-        mi_usuario.setContraseña(contraseña);
-        mi_usuario.setTelefono(Telefono);
-        mi_usuario.setDireccion(direccion);
-        mi_usuario.setCorreo(correo);
-        mi_usuario.setBarrio(barrio);
-        mi_usuario.setTipo_usuario_id_tipo_usuario(Tipo_usuario);
-        mi_usuario.setCiudad_id_ciudad(Ciudad);
-        mi_usuario.setTipo_genero_id_tipo_genero(Tipo_genero);
-        mi_usuario.setEstado_usuario_id_estado_usuario(Estado_usuario);
-        mi_usuario.setTipo_documento_id_tipo_documento(Tipo_documento);
+        
+        int entrada = Integer.parseInt(Entrada);
+        int salida = Integer.parseInt(Salida);
+        int saldo = Integer.parseInt(Saldo);
+        
+        
+        inventarioDAO idao = new inventarioDAO();
+        inventario i = new inventario();
+        
+        i.setIn_entradas(entrada);
+        i.setIn_salidas(salida);
+        i.setIn_saldo(saldo);
+        
+        
         
         System.out.println("El valor es " + BanderaEstado);
         if (BanderaEstado.equals("Correcto")) {
-            String respuestaRegistrada = mi_usuario_dao.AdicionarUsuario(mi_usuario);
+            String respuestaRegistrada = idao.AdicionarInventario(i);
             System.out.println("Res " + respuestaRegistrada);
             System.out.println("Res " + respuestaRegistrada.length());
             if (respuestaRegistrada.length() == 0) {
                 out.println("<script type=\"text/javascript\">");
-                out.println("alert('" + "Usuario Registrado con éxito." + "');");
-                out.println("window.location.href = 'inicio.jsp';");
+                out.println("alert('" + "Inventario registrada con éxito." + "');");
+                out.println("window.location.href = '/vigiwebB/vista/inventario.jsp';");
                 out.println("</script>");
             } else {
                 out.println("<script type=\"text/javascript\">");
-                out.println("alert('" + respuestaRegistrada + "');");
+                //out.println("alert('" + respuestaRegistrada + "');");
                 out.println("alert('" + "Error encontrado: " + respuestaRegistrada.replace("'", "") + "');");
                 out.println("window.history.back();");
                 out.println("</script>");
-                
+
             }
         } else {
             System.out.println("El valor no es correcto " + BanderaEstado);
-        }
-
+        }   
     }
 
-// <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
      *

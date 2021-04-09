@@ -34,7 +34,7 @@ public class pruebaConsultarListaUsuarios {
             System.out.println("<td>" + U.getId_usuarios() + "</td>");
             System.out.println("<td>" + U.getNumero_documento() + "</td>");
             System.out.println("<td>" + U.getNombre_usuario() + "</td>");
-            System.out.println("<td>" + U.getContraseña() + "</td>");
+            System.out.println("<td>" + U.getContrasena() + "</td>");
             System.out.println("<td>" + U.getTelefono() + "</td>");
             System.out.println("<td>" + U.getDireccion() + "</td>");
             System.out.println("<td>" + U.getCorreo() + "</td>");

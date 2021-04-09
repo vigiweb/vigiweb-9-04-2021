@@ -34,7 +34,7 @@ public class formaPagoDAO {
             sentencia = nuevaCon.prepareStatement(Query);
 
             sentencia.setString(1, FormaPago.getTipo_pago());
-            sentencia.setInt(2, FormaPago.getReferencia_Pago());
+            sentencia.setString(2, FormaPago.getReferencia_pago());
 
             sentencia.execute();
             miRespuesta = "";
@@ -62,7 +62,7 @@ public class formaPagoDAO {
 
             sentencia.setInt(1, forma_pagos.getId_forma_pago());
             sentencia.setString(2, forma_pagos.getTipo_pago());
-            sentencia.setInt(3, forma_pagos.getReferencia_Pago());
+            sentencia.setString(3, forma_pagos.getReferencia_pago());
             sentencia.setInt(4, forma_pagos.getId_forma_pago());
 
             sentencia.executeUpdate();
@@ -77,7 +77,7 @@ public class formaPagoDAO {
     
     //////////////////////////////*MÉTODO CONSULTAR*//////////////////////////////////////
 
-     public forma_pago Consultarforma_pago(int id_forma_pago) {
+     public forma_pago Consultarforma_pago(String id_forma_pago) {
         forma_pago forma_pagos = null;
 
         conexion miConexion = new conexion();
@@ -96,7 +96,7 @@ public class formaPagoDAO {
                 
                 forma_pagos.setId_forma_pago(rs.getInt(1));
                 forma_pagos.setTipo_pago(rs.getString(2));
-                forma_pagos.setReferencia_Pago(rs.getInt(3));
+                forma_pagos.setReferencia_pago(rs.getString(3));
             }
             return forma_pagos;  
         } catch (Exception ex) {
@@ -108,7 +108,7 @@ public class formaPagoDAO {
         //////////////////////////////*MÉTODO LISTAR CONSULTA*//////////////////////////////////////
 
      
-     public ArrayList<forma_pago> Listarforma_pago(int id_forma_pago, String tipo_pago, int referencia_Pago ) {
+     public ArrayList<forma_pago> Listarforma_pago(String id_forma_pago, String tipo_pago, String referencia_Pago ) {
         ArrayList<forma_pago>mi_lista_forma_pago = new ArrayList<forma_pago>();
         forma_pago forma_pagos ;
         
@@ -133,7 +133,7 @@ public class formaPagoDAO {
                 
                 forma_pagos.setId_forma_pago(rs.getInt(1));
                 forma_pagos.setTipo_pago(rs.getString(2));
-                forma_pagos.setReferencia_Pago(rs.getInt(3));
+                forma_pagos.setReferencia_pago(rs.getString(3));
 
                 mi_lista_forma_pago.add(forma_pagos);
             }

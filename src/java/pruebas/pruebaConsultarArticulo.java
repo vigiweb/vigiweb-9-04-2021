@@ -20,10 +20,10 @@ public class pruebaConsultarArticulo {
     public static void main(String[] args) {
         
         articuloDAO miarticuloDAO = new articuloDAO();
-        articulo miarticulo = miarticuloDAO.ConsultarArticulo(1);
+        articulo miarticulo = miarticuloDAO.ConsultarArticulo("354534");
 
         if (miarticulo != null) {
-            System.out.println("Artículo encontrado " + miarticulo.getId_articulo() + " " + miarticulo.getNombre_articulo() + " " + miarticulo.getDescripcion_articulo());
+            System.out.println("Artículo encontrado " + miarticulo.getReferencia_articulo() + " " + miarticulo.getNombre_articulo() + " " + miarticulo.getDescripcion_articulo());
         } else {
             System.out.println("El artículo no fue encontrado");
         }

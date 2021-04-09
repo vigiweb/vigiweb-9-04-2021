@@ -1,0 +1,52 @@
+.container{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 150px;
+    border-radius: 3%;
+    width: 50%;
+    opacity: 0.9;
+}
+
+
+.form-control:focus{
+    background: none;
+    box-shadow: none;
+    outline: none;
+}
+.form-control{
+    margin-top: 10px;
+    background: none;
+    border-style: none;
+    transition: o.5s ease-in;
+    border-bottom: #EC6A0A solid 1px;
+    padding: 20px;
+}
+
+.form-control::placeholder{
+    color: gray;
+}
+
+.btn-arg{
+    margin-top: 10px;
+    background-color: #EC6A0A;
+    color: white;
+}
+.btn-arg:hover{
+    background-color: #5186c9;
+    border-color: #5186c9;
+    color: white;
+}
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+body{
+     background-image: url('../imagenes/feet-619399_1280.jpg');
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-attachment: fixed;
+}
+
+

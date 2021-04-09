@@ -10,30 +10,50 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="https://fonts.googleapis.com/css2?family=Anton&family=Cuprum&family=Kaushan+Script&family=Pacifico&family=Sansita+Swashed:wght@600&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./css/bootstrap.css">     
-        <link rel="stylesheet" href="./css/entradaAdministrador.css">        
-        <title>INICIO</title>
+        <link rel="stylesheet" href="../css/bootstrap.css">     
+        <link rel="stylesheet" href="../css/entradaAdministrador.css">        
+        <title>Inicio</title>
     </head>
     <body>
 
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" style="height: 90px;">
-            <a class="navbar-brand" href="entradaAdministrador.jsp">INICIO</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
 
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <a class="navbar-brand" href="#">Baby Runner</a>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">REGISTRAR</a>
+                <li class="nav-item active">
+                        <a class="nav-link" href="./entradaAdministrador.jsp">Inicio</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">CONSULTAR</a>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Registros Principales</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="../vista/proveedores.jsp">Registrar Proveedores</a>
+                            <a class="dropdown-item" href="../vista/usuarios.jsp">Registrar Usuarios</a> 
+                            <a class="dropdown-item" href="../vista/articulos.jsp">Registrar Artículos</a>
+                        </div>  
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Registros Secundarios</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="../vista/ciudades.jsp">Registrar Ciudades</a>
+                            <a class="dropdown-item" href="../vista/estadoarticulo.jsp">Registrar Estado Artículo</a> 
+                            <a class="dropdown-item" href="../vista/estadousuario.jsp">Registrar Estado Usuario</a>
+                            <a class="dropdown-item" href="../vista/formaPago.jsp">Registrar Forma de Pago</a>
+                            <a class="dropdown-item" href="../vista/tipomov.jsp">Registrar Tipo Movimiento</a>
+                            <a class="dropdown-item" href="../vista/tipousuario.jsp">Registrar Tipo Usuario</a>
+                        </div>  
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Registros Anexos</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="../vista/inventario.jsp">Registrar Inventario</a>
+                            <a class="dropdown-item" href="../vista/factura.jsp">Registrar Facturas</a> 
+                        </div>  
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <button class="btn btn-info my-2 my-sm-0" type="button"><a href="home.jsp" class="text-decoration-none">Salir</a></button>
+                    <button class="btn btn-outline-danger my-2 my-sm-0" type="submit"><a href="../home.jsp" class="text-decoration-none" style="color: white">Salir</a></button>
                 </form>
             </div>
         </nav>
@@ -44,23 +64,23 @@
                 <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
                 <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
             </ol>
-            <div class="carousel-inner" style="height: 700px;">
-                <div class="carousel-item active" style="height: 700px;">
-                    <img src="./imagenes/startup-593341_1280.jpg" class="d-block w-100" alt="..." style="height: 700px;">
+            <div class="carousel-inner" style="height: 600px;">
+                <div class="carousel-item active" style="height: 600px;">
+                    <img src="../imagenes/startup-593341_1280.jpg" class="d-block w-100" alt="..." style="height: 600px;">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>¡Bienvenido!</h5>
                         <p>Aquí puedes consultar los usuarios ingresados.</p>
                     </div>
                 </div>
-                <div class="carousel-item" style="height: 700px;">
-                    <img src="./imagenes/office-4776820_1280.jpg" class="d-block w-100" alt="..."style="height: 700px;">
+                <div class="carousel-item" style="height: 600px;">
+                    <img src="../imagenes/office-4776820_1280.jpg" class="d-block w-100" alt="..."style="height: 600px;">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>También</h5>
                         <p style="color: black;">Puedes editar cada uno de tus empleados.</p>
                     </div>
                 </div>
-                <div class="carousel-item" style="height: 700px;">
-                    <img src="./imagenes/money-2724241_1280.jpg" class="d-block w-100" alt="..."style="height: 700px;">
+                <div class="carousel-item" style="height: 500px;">
+                    <img src="../imagenes/money-2724241_1280.jpg" class="d-block w-100" alt="..."style="height: 600px;">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>Por otro lado</h5>
                         <p>Baby Runner funcionará sobre ruedas.</p>
@@ -76,7 +96,7 @@
                 <span class="sr-only">Next</span>
             </a>
         </div>
-        
+
         <div class="contenedor" style="padding-bottom: 90px;">
             <div class="contenedor-parrafos">
                 <p class="contenedor-titulo" style="padding-top: 90px;">BABY RUNNER</p>
@@ -85,17 +105,16 @@
                 <p class="contenedor-texto">para manejar el inventario de su empresa</p>
             </div>
         </div>
-        
-         <footer>
+
+        <footer>
             <div class="cont-footer">
                 <div class="footer-items1">
                     <p>Inicio</p>
-                    <p>Catalogo</p>
                     <p>Contacto</p>
                 </div>
                 <div class="footer-items">
-                    <img src="./imagenes/logo.png" alt="" srcset=""
-                        style="padding-top: 30px;">
+                    <img src="../imagenes/logo.png" alt="" srcset=""
+                         style="padding-top: 30px;">
                 </div>
                 <div class="footer-items1">
                     <i class="fab fa-facebook"></i><br>

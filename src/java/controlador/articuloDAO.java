@@ -27,15 +27,15 @@ public class articuloDAO {
 
         PreparedStatement sentencia;
         try {
-            String Query = "Insert into articulo (nombre_articulo, precio_articulo, cantidad_articulo, iva_articulo, descripcion_articulo, inventario_id_inventario, estado_articulo_id_estado_articulo, proveedor_id_proveedor)" + "values (?,?,?,?,?,?,?,?);";
+            String Query = "Insert into articulo (nombre_articulo, referencia_articulo, precio_articulo, cantidad_articulo, iva_articulo, descripcion_articulo, estado_articulo_id_estado_articulo, proveedor_id_proveedor)" + "values (?,?,?,?,?,?,?,?);";
             sentencia = nuevaCon.prepareStatement(Query);
 
             sentencia.setString(1, Articulo.getNombre_articulo());
-            sentencia.setDouble(2, Articulo.getPrecio_articulo());
-            sentencia.setInt(3, Articulo.getCantidad_articulo());
-            sentencia.setDouble(4, Articulo.getIva_articulo());
-            sentencia.setString(5, Articulo.getDescripcion_articulo());
-            sentencia.setInt(6, Articulo.getInventario_id_inventario());
+            sentencia.setString(2, Articulo.getReferencia_articulo());
+            sentencia.setDouble(3, Articulo.getPrecio_articulo());
+            sentencia.setInt(4, Articulo.getCantidad_articulo());
+            sentencia.setDouble(5, Articulo.getIva_articulo());
+            sentencia.setString(6, Articulo.getDescripcion_articulo());
             sentencia.setInt(7, Articulo.getEstado_articulo_id_estado_articulo());
             sentencia.setInt(8, Articulo.getProveedor_id_proveedor());
 
@@ -62,20 +62,19 @@ public class articuloDAO {
 
         PreparedStatement sentencia;
         try {
-            String Query = "update articulo set id_articulo=?, nombre_articulo=?, precio_articulo=?, cantidad_articulo=?, iva_articulo=?, descripcion_articulo=?, inventario_id_inventario=?, estado_articulo_id_estado_articulo = ?, proveedor_id_proveedor=? where id_articulo=?";
+            String Query = "update articulo set nombre_articulo=?, referencia_articulo=?, precio_articulo=?, cantidad_articulo=?, iva_articulo=?, descripcion_articulo=?, estado_articulo_id_estado_articulo = ?, proveedor_id_proveedor=? where referencia_articulo=?";
             sentencia = nuevaCon.prepareStatement(Query);
             
-            sentencia.setInt(1, Articulo.getId_articulo());
-            sentencia.setString(2, Articulo.getNombre_articulo());
+            sentencia.setString(1, Articulo.getNombre_articulo());
+            sentencia.setString(2, Articulo.getReferencia_articulo());
             sentencia.setDouble(3, Articulo.getPrecio_articulo());
             sentencia.setInt(4, Articulo.getCantidad_articulo());
             sentencia.setDouble(5, Articulo.getIva_articulo());
             sentencia.setString(6, Articulo.getDescripcion_articulo());
-            sentencia.setInt(7, Articulo.getInventario_id_inventario());
-            sentencia.setInt(8, Articulo.getEstado_articulo_id_estado_articulo());
-            sentencia.setInt(9, Articulo.getProveedor_id_proveedor());
+            sentencia.setInt(7, Articulo.getEstado_articulo_id_estado_articulo());
+            sentencia.setInt(8, Articulo.getProveedor_id_proveedor());
 
-            sentencia.setInt(10, Articulo.getId_articulo());
+            sentencia.setString(10, Articulo.getReferencia_articulo());
 
             sentencia.executeUpdate();
             miRespuesta = "";
@@ -90,7 +89,7 @@ public class articuloDAO {
     
 //////////////////////////////*MÉTODO CONSULTAR*//////////////////////////////////////
 
-   public articulo ConsultarArticulo (int id_articulo) {
+   public articulo ConsultarArticulo (String referencia_articulo) {
     articulo miarticulo = null;
     
         conexion miConexion = new conexion();
@@ -101,20 +100,19 @@ public class articuloDAO {
             
             Statement sentencia = nuevaCon.createStatement();
             
-            String Query = "Select id_articulo, nombre_articulo, precio_articulo, cantidad_articulo, iva_articulo, descripcion_articulo, inventario_id_inventario, estado_articulo_id_estado_articulo, proveedor_id_proveedor from articulo where id_articulo = " + id_articulo;
+            String Query = "Select nombre_articulo, referencia_articulo, precio_articulo, cantidad_articulo, iva_articulo, descripcion_articulo, estado_articulo_id_estado_articulo, proveedor_id_proveedor from articulo where referencia_articulo = " + referencia_articulo;
             ResultSet rs = sentencia.executeQuery(Query);
             while (rs.next()){
             
                 miarticulo = new articulo();
-                miarticulo.setId_articulo(rs.getInt(1));
-                miarticulo.setNombre_articulo(rs.getString(2));
+                miarticulo.setNombre_articulo(rs.getString(1));
+                miarticulo.setReferencia_articulo(rs.getString(2));
                 miarticulo.setPrecio_articulo(rs.getDouble(3));
                 miarticulo.setCantidad_articulo(rs.getInt(4));
                 miarticulo.setIva_articulo(rs.getDouble(5));
                 miarticulo.setDescripcion_articulo(rs.getString(6));
-                miarticulo.setInventario_id_inventario(rs.getInt(7));
-                miarticulo.setEstado_articulo_id_estado_articulo(rs.getInt(8));
-                miarticulo.setProveedor_id_proveedor(rs.getInt(9));
+                miarticulo.setEstado_articulo_id_estado_articulo(rs.getInt(7));
+                miarticulo.setProveedor_id_proveedor(rs.getInt(8));
 
                 
             }
@@ -130,7 +128,7 @@ public class articuloDAO {
    
    //////////////////////////////*MÉTODO LISTAR CONSULTA*//////////////////////////////////////
 
-    public ArrayList<articulo> ConsultarListadoArticulos(int id_articulo, String nombre_articulo) {
+    public ArrayList<articulo> ConsultarListadoArticulos(String nombre_articulo, String referencia_articulo) {
         ArrayList<articulo>mi_listado_articulos = new ArrayList<articulo>();
         articulo mi_articulo;
         
@@ -138,28 +136,27 @@ public class articuloDAO {
         Connection nuevaCon;
         nuevaCon = miConexion.getConn();
         
-        System.out.println("Buscando parametro: " + id_articulo);
+        System.out.println("Buscando parametro: " + referencia_articulo);
         
         try{
             Statement sentencia = nuevaCon.createStatement();
             
-            String Query = " select id_articulo,nombre_articulo,precio_articulo,cantidad_articulo,iva_articulo,descripcion_articulo,inventario_id_inventario,estado_articulo_id_estado_articulo,proveedor_id_proveedor "
+            String Query = " select nombre_articulo,referencia_articulo,precio_articulo,cantidad_articulo,iva_articulo,descripcion_articulo,estado_articulo_id_estado_articulo,proveedor_id_proveedor "
                     + " from articulo "
-                    + " where id_articulo like '%" + id_articulo + "%' "
-                    + "  or (nombre_articulo) like ('%" + nombre_articulo + "%') ORDER BY id_articulo;";
+                    + " where referencia_articulo like '%" + referencia_articulo + "%' "
+                    + "  or (nombre_articulo) like ('%" + nombre_articulo + "%') ORDER BY referencia_articulo;";
             ResultSet rs = sentencia.executeQuery(Query);
             while (rs.next()) {
                 
                 mi_articulo = new articulo();
-                mi_articulo.setId_articulo(rs.getInt(1));
-                mi_articulo.setNombre_articulo(rs.getString(2));
+                mi_articulo.setNombre_articulo(rs.getString(1));
+                mi_articulo.setReferencia_articulo(rs.getString(2));
                 mi_articulo.setPrecio_articulo(rs.getDouble(3));
                 mi_articulo.setCantidad_articulo(rs.getInt(4));
                 mi_articulo.setIva_articulo(rs.getDouble(5));
                 mi_articulo.setDescripcion_articulo(rs.getString(6));
-                mi_articulo.setInventario_id_inventario(rs.getInt(7));
-                mi_articulo.setEstado_articulo_id_estado_articulo(rs.getInt(8));
-                mi_articulo.setProveedor_id_proveedor(rs.getInt(9));
+                mi_articulo.setEstado_articulo_id_estado_articulo(rs.getInt(7));
+                mi_articulo.setProveedor_id_proveedor(rs.getInt(8));
 
                 mi_listado_articulos.add(mi_articulo);
             }
@@ -182,11 +179,11 @@ public class articuloDAO {
         
         PreparedStatement sentencia;
         try{
-            String Query = " delete from articulo where nombre_articulo=? and id_articulo=? ";
+            String Query = " delete from articulo where nombre_articulo=? and referencia_articulo=? ";
             sentencia = nuevaCon.prepareStatement(Query);
             
             sentencia.setString(1, Articulo.getNombre_articulo());
-            sentencia.setInt(2, Articulo.getId_articulo());
+            sentencia.setString(2, Articulo.getReferencia_articulo());
             
             sentencia.execute();
             miRespuesta = "";

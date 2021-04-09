@@ -21,21 +21,21 @@ public class pruebaEliminarArticulo {
     public static void main(String[] args) {
 
         articuloDAO mi_articulo_dao = new articuloDAO();
-        ArrayList<articulo> mi_lista_articulo = mi_articulo_dao.ConsultarListadoArticulos(2, "Pantalon");
+        ArrayList<articulo> mi_lista_articulo = mi_articulo_dao.ConsultarListadoArticulos("Camisa", "354534");
 
         for (articulo A : mi_lista_articulo) {
 
-            System.out.println("ID del artículo - " + A.getId_articulo() + "\n" + "Nombre del artículo - " + A.getNombre_articulo() + "\n");
+            System.out.println("ID del artículo - " + A.getReferencia_articulo() + "\n" + "Nombre del artículo - " + A.getNombre_articulo() + "\n");
 
         }
 
         System.out.println("El registro se elimino satisfactoriamnete");
         mi_articulo_dao.EliminarArticulo(mi_lista_articulo.get(0));
-        mi_lista_articulo = mi_articulo_dao.ConsultarListadoArticulos(2, "Pantalon");
+        mi_lista_articulo = mi_articulo_dao.ConsultarListadoArticulos("Camisa", "354534");
 
         for (articulo A : mi_lista_articulo) {
 
-            System.out.println("ID del artículo - " + A.getId_articulo() + "\n" + "Nombre del artículo - " + A.getNombre_articulo() + "\n");
+            System.out.println("ID del artículo - " + A.getReferencia_articulo() + "\n" + "Nombre del artículo - " + A.getNombre_articulo() + "\n");
 
         }
 

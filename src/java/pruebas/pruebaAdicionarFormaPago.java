@@ -26,18 +26,18 @@ public class pruebaAdicionarFormaPago {
        Scanner teclado = new Scanner(System.in);
        
        String tipo_pago = "";
-       int referencia_Pago;
+       String referencia_Pago ="";
        
         System.out.println("Ingrese la forma de pago");
         tipo_pago = teclado.nextLine();
         
         System.out.println("Ingrese la referenicia de pago");
-        referencia_Pago = teclado.nextInt();
+        referencia_Pago = teclado.nextLine();
         
         
         
         mi_forma_pago.setTipo_pago(tipo_pago);
-        mi_forma_pago.setReferencia_Pago(referencia_Pago);
+        mi_forma_pago.setReferencia_pago(referencia_Pago);
         String miRespuesta = mi_forma_pago_dao.adicionarFormapago(mi_forma_pago);
         
         if (miRespuesta.length() == 0) {

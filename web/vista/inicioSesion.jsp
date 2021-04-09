@@ -10,32 +10,32 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="https://fonts.googleapis.com/css2?family=Anton&family=Scada&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="./css/bootstrap.css">
-        <link rel="stylesheet" href= "./css/estilo.css">
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <link rel="stylesheet" href= "../css/estilo.css">
 
-        <title>INICIAR SESIÓN</title>
+        <title>Inicio Sesión</title>
     </head>
 
     <body class="bg-dark">
         
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" style="height: 90px;">
-            <a class="navbar-brand" href="home.jsp">INICIO</a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <a class="navbar-brand" href="../home.jsp">Inicio</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
+                    <!--<li class="nav-item active">
                         <a class="nav-link" href="#">CATALOGO</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">CONTACTO</a>
-                    </li>
+                    </li>-->
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <button class="btn btn-info my-2 my-sm-0 mr-3" type="button"><a href="inicioSesion.jsp" class="text-decoration-none">Iniciar sesión</a></button>
-                    <button class="btn btn-outline-info my-2 my-sm-0" type="button"><a href="registroUsuarios.jsp" class="text-decoration-none">Registrarse</a></button>
+                    <button class="btn btn-info my-2 my-sm-0 mr-3" type="button"><a href="./inicioSesion.jsp" class="text-decoration-none" style="color: white">Iniciar sesión</a></button>
+                    <!--<button class="btn btn-outline-info my-2 my-sm-0" type="button"><a href="./usuarios.jsp" class="text-decoration-none" style="color: white">Registrarse</a></button>-->
                 </form>
             </div>
         </nav>
@@ -47,12 +47,12 @@
                 </div>
                 <div class="col-lg-5 d-flex flex-column align-items-end min-vh-100">
                     <div class="px-lg-5 pt-lg-4 pb-lg-1 p-4 w-100 mb-auto">
-                        <img src="./imagenes/logo.png" class="img-fluid">
+                        <img src="../imagenes/logo.png" class="img-fluid">
                     </div>
                     <div class="px-lg-5 py-lg-4 p-4 w-100 align-self-center">
                         <h1 class="font-weight-bold mb-4">¡Bienvenido a Baby Runner!</h1>
 
-                        <form action="inicioSesion" method="post">
+                        <form action="/vigiwebB/inicioSesion" method="post">
                             <div class="form-group mb-4">
                                 <label for="exampleInputEmail1" class="form-label font-weight-bold ">Usuario</label>
                                 <input type="text" name="usuario" class="form-control bg-dark-x border-0" placeholder="Ingrese su identificación" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -67,7 +67,7 @@
                     </div>
                     
                     <div class="text-center px-lg-5 pt-lg-4 p-4 w-100 mt-auto">
-                        <p class="d-inline pr-3">¿No tienes una cuenta aún?</p><a href="registroUsuarios.jsp" class="text-light font-weight-bold text-decoration-none">¡Registrate!</a>
+                        <p class="d-inline pr-3">¿No tienes una cuenta aún?</p><a href="./usuarios.jsp" class="text-light font-weight-bold text-decoration-none">¡Registrate!</a>
                     </div>
                     
                 </div>

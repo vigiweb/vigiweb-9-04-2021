@@ -14,7 +14,7 @@ public class usuarios {
     private int id_usuarios;
     private String numero_documento;
     private String nombre_usuario;
-    private String contraseña;
+    private String contrasena;
     private int telefono;
     private String direccion;
     private String correo;
@@ -49,12 +49,12 @@ public class usuarios {
         this.nombre_usuario = nombre_usuario;
     }
 
-    public String getContraseña() {
-        return contraseña;
+    public String getContrasena() {
+        return contrasena;
     }
 
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
     }
 
     public int getTelefono() {
@@ -128,6 +128,8 @@ public class usuarios {
     public void setCiudad_id_ciudad(int ciudad_id_ciudad) {
         this.ciudad_id_ciudad = ciudad_id_ciudad;
     }
+
+
 
     
 

@@ -74,7 +74,7 @@ public class tipoMovDAO {
      //////////////////////////////*MÉTODO CONSULTAR*//////////////////////////////////////
 
      
-     public tipo_mov Consultartipomov (int id_tipo_mov) {
+     public tipo_mov Consultartipomov (String id_tipo_mov) {
     tipo_mov mi_tipo_mov = null;
     
         conexion miConexion = new conexion();

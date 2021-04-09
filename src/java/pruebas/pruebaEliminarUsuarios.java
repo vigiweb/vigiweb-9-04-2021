@@ -22,13 +22,13 @@ public class pruebaEliminarUsuarios {
         
         usuariosDAO usuario_dao = new usuariosDAO();
         
-        ArrayList<usuarios> mi_listado_usuarios = usuario_dao.ConsultarListadoUusarios("", "", "");
+        ArrayList<usuarios> mi_listado_usuarios = usuario_dao.ConsultarListadoUusarios("587545487", "Carlos", "carlos@gmail.com");
         for (usuarios C : mi_listado_usuarios) {
             System.out.println(" Nombre : " + C.getId_usuarios() + " Id. " + C.getNombre_usuario());    
         }
         System.out.println("Se elimino");
         usuario_dao.EliminarUsuarios(mi_listado_usuarios.get(0));
-        mi_listado_usuarios = usuario_dao.ConsultarListadoUusarios("", "", "");
+        mi_listado_usuarios = usuario_dao.ConsultarListadoUusarios("587545487", "Carlos", "carlos@gmail.com");
         for (usuarios C : mi_listado_usuarios) {
             System.out.println(" Nombre : " + C.getId_usuarios() + " Id. " + C.getNombre_usuario());    
         }

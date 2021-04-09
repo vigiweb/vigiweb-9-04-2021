@@ -51,13 +51,13 @@ public class inicioSesion extends HttpServlet {
                     out.println("window.location.href ='inicioSesion.jsp';");
                     out.println("</script>");
                 } else {
-                    System.out.println(mi_usuario.getContraseña());
+                    System.out.println(mi_usuario.getContrasena());
                     System.out.println(Clave);
                     
-                    if (mi_usuario.getContraseña().equals(Clave)) {
+                    if (mi_usuario.getContrasena().equals(Clave)) {
                         out.println("<script type=\"text/javascript\">");
-                        out.println("alert('" + "Bienvenido : " + mi_usuario.getNombre_usuario() + "');");
-                        out.println("window.location.href ='entradaAdministrador.jsp';");
+                        out.println("alert('" + "Bienvenido o Bienvenida: " + mi_usuario.getNombre_usuario() + "');");
+                        out.println("window.location.href ='/vigiwebB/vista/entradaAdministrador.jsp';");
                         out.println("</script>");
                     } else {
                         out.println("<script type=\"text/javascript\">");

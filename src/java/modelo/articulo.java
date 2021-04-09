@@ -13,11 +13,11 @@ public class articulo {
     
     private int id_articulo;
     private String nombre_articulo;
+    private String referencia_articulo;
     private double precio_articulo;
     private int cantidad_articulo;
     private double iva_articulo;
     private String descripcion_articulo;
-    private int inventario_id_inventario;
     private int estado_articulo_id_estado_articulo;
     private int proveedor_id_proveedor;
 
@@ -35,6 +35,14 @@ public class articulo {
 
     public void setNombre_articulo(String nombre_articulo) {
         this.nombre_articulo = nombre_articulo;
+    }
+
+    public String getReferencia_articulo() {
+        return referencia_articulo;
+    }
+
+    public void setReferencia_articulo(String referencia_articulo) {
+        this.referencia_articulo = referencia_articulo;
     }
 
     public double getPrecio_articulo() {
@@ -69,14 +77,6 @@ public class articulo {
         this.descripcion_articulo = descripcion_articulo;
     }
 
-    public int getInventario_id_inventario() {
-        return inventario_id_inventario;
-    }
-
-    public void setInventario_id_inventario(int inventario_id_inventario) {
-        this.inventario_id_inventario = inventario_id_inventario;
-    }
-
     public int getEstado_articulo_id_estado_articulo() {
         return estado_articulo_id_estado_articulo;
     }
@@ -92,6 +92,5 @@ public class articulo {
     public void setProveedor_id_proveedor(int proveedor_id_proveedor) {
         this.proveedor_id_proveedor = proveedor_id_proveedor;
     }
-
-    
+   
 }

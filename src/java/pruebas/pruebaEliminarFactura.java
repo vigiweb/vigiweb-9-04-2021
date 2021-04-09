@@ -10,13 +10,13 @@ public class pruebaEliminarFactura {
         
         facturaDAO facDAO = new facturaDAO();
         
-        ArrayList<factura> mi_lista_factura = facDAO.Listarfactura(0, "", 0);
+        ArrayList<factura> mi_lista_factura = facDAO.Listarfactura("", "", "");
         for (factura I : mi_lista_factura) {
             System.out.println("Código: " + I.getId_factura() + " Fecha: " + I.getFecha_factura());
         }
         System.out.println("Se eliminó");
         facDAO.Eliminarfactura(mi_lista_factura.get(0));
-        mi_lista_factura = facDAO.Listarfactura(0, "", 0);
+        mi_lista_factura = facDAO.Listarfactura("", "", "");
         for (factura I : mi_lista_factura) {
             System.out.println("Código: " + I.getId_factura() + " Saldo: " + I.getFecha_factura());
         }

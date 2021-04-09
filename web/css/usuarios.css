@@ -13,4 +13,56 @@
     top: 0;
     z-index: 1030;
 }
+.container{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    border-radius: 3%;
+    width: 50%;
+    opacity: 0.8;
+}
+
+
+.form-control:focus{
+    background: none;
+    box-shadow: none;
+    outline: none;
+}
+.form-control{
+    margin-top: 10px;
+    background: none;
+    border-style: none;
+    transition: o.5s ease-in;
+    border-bottom: #68E491 solid 1px;
+    padding: 20px;
+}
+
+.form-control::placeholder{
+    color: gray;
+}
+
+.btn-arg{
+    margin-top: 10px;
+    background-color: #68E491;
+    color: white;
+}
+.btn-arg:hover{
+    background-color: #5186c9;
+    border-color: #5186c9;
+    color: white;
+}
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+body{
+     background-image: url('../imagenes/azul.jpg');
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-attachment: fixed;
+}
+
 

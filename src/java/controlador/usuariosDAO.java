@@ -30,7 +30,7 @@ public class usuariosDAO {
 
             sentencia.setString(1, Usuarios.getNumero_documento());
             sentencia.setString(2, Usuarios.getNombre_usuario());
-            sentencia.setString(3, Usuarios.getContraseña());
+            sentencia.setString(3, Usuarios.getContrasena());
             sentencia.setInt(4, Usuarios.getTelefono());
             sentencia.setString(5, Usuarios.getDireccion());
             sentencia.setString(6, Usuarios.getCorreo());
@@ -70,7 +70,7 @@ public String AtualizarUsuario (usuarios Usuarios) {
 
             sentencia.setString(1, Usuarios.getNumero_documento());
             sentencia.setString(2, Usuarios.getNombre_usuario());
-            sentencia.setString(3, Usuarios.getContraseña());
+            sentencia.setString(3, Usuarios.getContrasena());
             sentencia.setInt(4, Usuarios.getTelefono());
             sentencia.setString(5, Usuarios.getDireccion());
             sentencia.setString(6, Usuarios.getCorreo());
@@ -116,7 +116,7 @@ public String AtualizarUsuario (usuarios Usuarios) {
                 mi_usuario.setId_usuarios(rs.getInt(1));
                 mi_usuario.setNumero_documento(rs.getString(2));
                 mi_usuario.setNombre_usuario(rs.getString(3));
-                mi_usuario.setContraseña(rs.getString(4));
+                mi_usuario.setContrasena(rs.getString(4));
                 mi_usuario.setTelefono (rs.getInt(5));
                 mi_usuario.setDireccion(rs.getString(6));
                 mi_usuario.setCorreo(rs.getString(7));
@@ -163,7 +163,7 @@ public String AtualizarUsuario (usuarios Usuarios) {
                 mi_usuario.setId_usuarios(rs.getInt(1));
                 mi_usuario.setNumero_documento(rs.getString(2));
                 mi_usuario.setNombre_usuario(rs.getString(3));
-                mi_usuario.setContraseña(rs.getString(4));
+                mi_usuario.setContrasena(rs.getString(4));
                 mi_usuario.setTelefono (rs.getInt(5));
                 mi_usuario.setDireccion(rs.getString(6));
                 mi_usuario.setCorreo(rs.getString(7));

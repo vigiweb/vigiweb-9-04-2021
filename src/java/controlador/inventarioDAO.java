@@ -70,7 +70,7 @@ public class inventarioDAO {
     }
 
 //////////////////////////////*MÉTODO CONSULTAR*//////////////////////////////////////
-    public inventario ConsultarInventario(int id_inventario) {
+    public inventario ConsultarInventario(String id_inventario) {
         inventario mi_inventario = null;
 
         conexion miConexion = new conexion();
@@ -101,7 +101,7 @@ public class inventarioDAO {
     }
 
     //////////////////////////////*MÉTODO LISTAR CONSULTA*//////////////////////////////////////
-    public ArrayList<inventario> ConsultarListadoInventario(int id_inventario, int in_entradas, int in_salidas) {
+    public ArrayList<inventario> ConsultarListadoInventario(String id_inventario, String in_entradas, String in_salidas) {
 
         ArrayList<inventario> mi_lista_inventario = new ArrayList<inventario>();
         inventario mi_inventario;

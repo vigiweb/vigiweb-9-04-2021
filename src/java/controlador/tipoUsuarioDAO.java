@@ -75,7 +75,7 @@ public class tipoUsuarioDAO {
      
           //////////////////////////////*MÉTODO CONSULTAR*//////////////////////////////////////
      
-     public tipo_usuario ConsultarTipoUsuario(int id_tipo_usuario) {
+     public tipo_usuario ConsultarTipoUsuario(String id_tipo_usuario) {
            tipo_usuario mi_tipo_usuario = null;
 
         conexion miConexion = new conexion();

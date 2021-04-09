@@ -10,7 +10,7 @@ public class pruebaConsultarListaFormaPago{
         
         formaPagoDAO fopadao = new formaPagoDAO();
         ArrayList<forma_pago> mi_fopa = new ArrayList<forma_pago>();
-        mi_fopa = fopadao.Listarforma_pago(0, "", 0);
+        mi_fopa = fopadao.Listarforma_pago("", "", "");
         
         int size = mi_fopa.size();
         System.out.println("<table border=\"1\"><tr><td>id_forma_pago</td><td>tipo_pago</td><td>referencia_Pago</td>");
@@ -20,7 +20,7 @@ public class pruebaConsultarListaFormaPago{
             System.out.println("<tr>");
             System.out.println("<td>" + I.getId_forma_pago()+ "</td>");
             System.out.println("<td>" + I.getTipo_pago() + "</td>");
-            System.out.println("<td>" + I.getReferencia_Pago() + "</td>");
+            System.out.println("<td>" + I.getReferencia_pago() + "</td>");
             
             System.out.println("</tr>");
             

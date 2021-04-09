@@ -20,7 +20,7 @@ public class pruebaConsultarTipoMov {
     public static void main(String[] args) {
 
       tipoMovDAO mi_tipo_mov_dao = new tipoMovDAO();
-      tipo_mov mi_tipo_mov = mi_tipo_mov_dao.Consultartipomov(1);
+      tipo_mov mi_tipo_mov = mi_tipo_mov_dao.Consultartipomov("");
 
         if (mi_tipo_mov != null) {
             System.out.println("El tipo de movimiento fue encontrado " + mi_tipo_mov.getId_tipo_mov() + " " + mi_tipo_mov.getM_descrip()+ " ");

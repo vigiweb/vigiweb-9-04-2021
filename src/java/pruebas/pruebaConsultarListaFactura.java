@@ -10,7 +10,7 @@ public class pruebaConsultarListaFactura {
         
         facturaDAO facdao = new facturaDAO();
         ArrayList<factura> mi_fac = new ArrayList<factura>();
-        mi_fac = facdao.Listarfactura(0, "", 0);
+        mi_fac = facdao.Listarfactura("", "", "");
         
         int size = mi_fac.size();
         System.out.println("<table border=\"1\"><tr><td>id_factura</td><td>fechafactura</td><td>usuarios_id_usuarios</td>");

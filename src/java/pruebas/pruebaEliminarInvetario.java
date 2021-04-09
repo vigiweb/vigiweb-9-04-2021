@@ -21,7 +21,7 @@ public class pruebaEliminarInvetario {
     public static void main(String[] args) {
 
         inventarioDAO mi_inventario_dao = new inventarioDAO();
-        ArrayList<inventario> mi_lista_inventario = mi_inventario_dao.ConsultarListadoInventario(0, 0, 0);
+        ArrayList<inventario> mi_lista_inventario = mi_inventario_dao.ConsultarListadoInventario("", "", "");
 
         for (inventario I : mi_lista_inventario) {
 
@@ -31,7 +31,7 @@ public class pruebaEliminarInvetario {
 
         System.out.println("El registro se elimino satisfactoriamnete");
         mi_inventario_dao.EliminarInventario(mi_lista_inventario.get(0));
-        mi_lista_inventario = mi_inventario_dao.ConsultarListadoInventario(0, 0, 0);
+        mi_lista_inventario = mi_inventario_dao.ConsultarListadoInventario("", "", "");
 
         for (inventario I : mi_lista_inventario) {
 
